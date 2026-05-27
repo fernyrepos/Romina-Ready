@@ -17,7 +17,7 @@ namespace RominaReady
         private float fadeStartTime;
         private float fadeAlpha = 1f;
         private const float FadeDuration = 3f;
-        public override Vector2 InitialSize => new Vector2(170f + Margin, 50f + Margin);
+        public override Vector2 InitialSize => new Vector2(170f + Margin, 40f + Margin);
         public Window_ReadyButton()
         {
             draggable = true;
@@ -47,7 +47,7 @@ namespace RominaReady
 
         public override void DoWindowContents(Rect inRect)
         {
-            Text.Font = GameFont.Small;
+            Text.Font = GameFont.Tiny;
             if (fadingOut)
             {
                 var elapsed = Time.realtimeSinceStartup - fadeStartTime;
@@ -79,6 +79,7 @@ namespace RominaReady
                 State.OnButtonClicked();
                 Close();
             }
+            Text.Font = GameFont.Small;
         }
     }
 }
