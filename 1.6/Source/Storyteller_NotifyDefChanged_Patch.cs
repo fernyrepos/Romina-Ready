@@ -1,5 +1,6 @@
 using HarmonyLib;
 using RimWorld;
+using Verse;
 
 namespace RominaReady
 {
@@ -8,6 +9,8 @@ namespace RominaReady
     {
         public static void Postfix()
         {
+            if (Find.Storyteller?.def == DefsOf.RR_RominaReady)
+                State.isReady = false;
             State.EnsureButtonState();
         }
     }
