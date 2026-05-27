@@ -6,6 +6,7 @@ namespace RominaReady
     public static class DefsOf
     {
         public static StorytellerDef RR_RominaReady;
+        public static IncidentCategoryDef DiseaseAnimal;
 
         static DefsOf()
         {

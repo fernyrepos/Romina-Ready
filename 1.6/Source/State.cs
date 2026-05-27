@@ -29,6 +29,12 @@ namespace RominaReady
             window = null;
         }
 
+        public static void ClearWindowReference(Window_ReadyButton expected)
+        {
+            if (window == expected)
+                window = null;
+        }
+
         public static void EnsureButtonState()
         {
             if (Find.Storyteller?.def != DefsOf.RR_RominaReady)

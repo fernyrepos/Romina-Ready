@@ -81,5 +81,10 @@ namespace RominaReady
             }
             Text.Font = GameFont.Small;
         }
+
+        public override void PostClose()
+        {
+            State.ClearWindowReference(this);
+        }
     }
 }
