@@ -36,8 +36,8 @@ namespace RominaReady
         public override void SetInitialSizeAndPosition()
         {
             windowRect = new Rect(
-                UI.screenWidth / 2f - InitialSize.x / 2f,
-                UI.screenHeight - 200f,
+                UI.screenWidth - InitialSize.x - 20f,
+                20f,
                 InitialSize.x,
                 InitialSize.y);
         }
@@ -51,7 +51,7 @@ namespace RominaReady
             }
 
             var prev = GUI.color;
-            GUI.color = fadingOut ? new Color(0.5f, 0.5f, 0.5f, fadeAlpha) : new Color(0.5f, 0.5f, 0.5f, 1f);
+            GUI.color = fadingOut ? new Color(0.5f, 0.5f, 0.5f, fadeAlpha) : Color.white;
 
             var label = State.hasHadFirstThreat ? "RR_ReadyForMore".Translate() : "RR_ReadyForThreats".Translate();
             if (Widgets.ButtonText(inRect, label, active: fadingOut is false))
