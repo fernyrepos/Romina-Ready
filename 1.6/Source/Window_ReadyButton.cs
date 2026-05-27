@@ -15,7 +15,7 @@ namespace RominaReady
         private float fadeStartTime;
         private float fadeAlpha = 1f;
         private const float FadeDuration = 3f;
-        public override Vector2 InitialSize => new Vector2(90f, 35f);
+        public override Vector2 InitialSize => new Vector2(90f + Margin, 35f + Margin);
         public Window_ReadyButton()
         {
             draggable = true;
