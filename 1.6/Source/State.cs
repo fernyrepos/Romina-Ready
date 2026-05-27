@@ -46,9 +46,6 @@ namespace RominaReady
         {
             Scribe_Values.Look(ref isReady, "RR_isReady", false);
             Scribe_Values.Look(ref hasHadFirstThreat, "RR_hasHadFirstThreat", false);
-
-            if (Scribe.mode == LoadSaveMode.ResolvingCrossRefs)
-                EnsureButtonState();
         }
     }
 }
