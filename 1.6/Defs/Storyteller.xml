@@ -4,10 +4,15 @@
   <StorytellerDef ParentName="BaseStoryteller">
     <defName>RR_RominaReady</defName>
     <label>Romina Ready</label>
-    <description>Romina creates story events on a classic increasing curve of challenge and tension. She'll push you with dangerous events, then give breathing room, then come back to push once more.</description>
-    <portraitLarge>UI/HeroArt/Storytellers/CassandraClassic</portraitLarge>
-    <portraitTiny>UI/HeroArt/Storytellers/CassandraClassicTiny</portraitTiny>
+    <description>Romina is a troubled woman who just wants to live her life, but refuses to indulge in life without consequence. She has a button that she presses only when she feels she can properly handle what comes afterward.\n\nShe adds a button to your screen after each bad event, and until you press it the game will halt further bad events. You must give your consent each time before further bad things occur to you.</description>
+    <portraitLarge>Romina Ready/Romina</portraitLarge>
+    <portraitTiny>Romina Ready/RominaTiny</portraitTiny>
     <listOrder>20</listOrder>
+			<modExtensions>
+				<li Class="ProgressionStorytellers.StorytellerExtension" MayRequire="ferny.ProgressionStorytellers">
+					<category>SlowPaced</category>
+				</li>
+			</modExtensions>
     <comps>
       <!-- Intro -->
       <li Class="StorytellerCompProperties_ClassicIntro" />
