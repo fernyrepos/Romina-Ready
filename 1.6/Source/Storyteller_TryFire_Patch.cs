@@ -13,8 +13,10 @@ namespace RominaReady
                 || fi.def.category == IncidentCategoryDefOf.DiseaseHuman
                 || fi.def.category == DefsOf.DiseaseAnimal
                 || fi.def.category == IncidentCategoryDefOf.DeepDrillInfestation
-                || (!RominaReadyMod.settings.allowSmallThreats && fi.def.category == IncidentCategoryDefOf.ThreatSmall)
-                || fi.def.IsAnomalyIncident;
+                || (!RominaReadyMod.settings.allowSmallThreats && (fi.def.category == IncidentCategoryDefOf.ThreatSmall || fi.def.letterDef == LetterDefOf.ThreatSmall))
+                || fi.def.IsAnomalyIncident
+                || fi.def.letterDef == LetterDefOf.ThreatBig
+                || fi.def.letterDef == LetterDefOf.NegativeEvent;
         }
 
         public static bool Prefix(FiringIncident fi, ref bool __result, out bool __state)
