@@ -38,15 +38,23 @@ namespace RominaReady
 
         public override void SetInitialSizeAndPosition()
         {
-            windowRect = new Rect(
-                UI.screenWidth - InitialSize.x - 20f,
-                20f,
-                InitialSize.x,
-                InitialSize.y);
+            if (State.buttonWindowPosition != Vector2.zero)
+            {
+                windowRect = new Rect(State.buttonWindowPosition.x, State.buttonWindowPosition.y, InitialSize.x, InitialSize.y);
+            }
+            else
+            {
+                windowRect = new Rect(
+                    UI.screenWidth - InitialSize.x - 20f,
+                    20f,
+                    InitialSize.x,
+                    InitialSize.y);
+            }
         }
 
         public override void DoWindowContents(Rect inRect)
         {
+            State.buttonWindowPosition = windowRect.position;
             Text.Font = GameFont.Tiny;
             if (fadingOut)
             {

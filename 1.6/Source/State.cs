@@ -1,3 +1,4 @@
+using UnityEngine;
 using Verse;
 
 namespace RominaReady
@@ -6,6 +7,7 @@ namespace RominaReady
     {
         public static bool isReady = false;
         public static bool hasHadFirstThreat = false;
+        public static Vector2 buttonWindowPosition = Vector2.zero;
         private static Window_ReadyButton window;
         public static void Clear()
         {
@@ -52,6 +54,7 @@ namespace RominaReady
         {
             Scribe_Values.Look(ref isReady, "RR_isReady", false);
             Scribe_Values.Look(ref hasHadFirstThreat, "RR_hasHadFirstThreat", false);
+            Scribe_Values.Look(ref buttonWindowPosition, "RR_buttonWindowPosition", Vector2.zero);
         }
     }
 }
