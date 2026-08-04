@@ -42,6 +42,11 @@ namespace RominaReady
             if (Find.Storyteller?.def != DefsOf.RR_RominaReady)
             {
                 isReady = true;
+                if (window != null)
+                {
+                    window.Close();
+                    window = null;
+                }
                 return;
             }
             if (isReady || window != null)
